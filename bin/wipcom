@@ -1,0 +1,16 @@
+#!/bin/env bash
+set +x
+
+git checkout -q wip > /dev/null
+
+git add . > /dev/null
+
+timestamp=$(date +"%d.%m.%Y %H:%M")
+
+if [ -z $1 ]; then
+	git commit -m "wip: $timestamp" > /dev/null
+else 
+	git commit -m "wip: $timestamp ($1)" > /dev/null
+fi
+
+git log --all --decorate --oneline --graph -5
