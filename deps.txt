@@ -1,0 +1,16 @@
+networkmanager
+pulseaudio
+pavucontrol
+brightnessctl
+cliphist (mb not)
+
+cmatrix
+hyprland
+hyprpaper
+sddm
+waybar
+wofi
+
+tree
+git
+less
