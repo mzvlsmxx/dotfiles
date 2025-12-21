@@ -3,7 +3,7 @@
 
 * {
 	font-family: "JetbrainsMono Nerd Font" ;
-	font-size: 15px;
+	font-size: 14px;
 	background: none;
 	border: none;
 	color: @primary;
@@ -15,14 +15,14 @@ tooltip {
 }
 
 #network {
-	margin: 0 10px;
+	margin: 0 16px;
 	transition: none;
 	color: @primary;
 	background: none;
 }
 
 #battery {
-	margin: 0 10px;
+	margin: 0 16px;
 	color: @primary;
 }
 
@@ -46,34 +46,33 @@ tooltip {
 }
 
 #backlight {
-	margin: 0 10px;
-	color: #161320;
-	background: #F8BD96;
+	margin: 0 16px;
+	color: @primary;
 }
 
 #clock {
-	margin: 0 10px;
+	margin: 0 16px;
 	color: @primary;
 }
 
 #tray {
-	margin: 0 10px;
+	margin: 0 16px;
 	color: @primary;
 }
 
 #custom-launcher {
-	margin: 0 10px;
+	margin: 0 16px;
     	color: @primary;
 }
 
 #hyprland-workspaces {
-	margin: 0 10px;
+	margin: 0 16px;
 	color: @primary;
 }
 
 
 #backlight {
 	background: none;
-	margin: 0 10px;
+	margin: 0 16px;
     	color: @primary;
 }
