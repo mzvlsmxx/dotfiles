@@ -8,4 +8,7 @@ sudo \cp -r ~/dotfiles/themes/fullblack/sddm/mzvlsmxx-sddm/ /usr/share/sddm/them
 \cp -r ~/dotfiles/themes/fullblack/config/* ~/.config/
 
 # commands
-cp -r ~/dotfiles/bin ~/
+\cp -r ~/dotfiles/bin ~/
+
+# backgrounds
+\cp -r ~/dotfiles/backgrounds/ ~/.config/
