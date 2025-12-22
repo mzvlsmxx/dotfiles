@@ -4,9 +4,11 @@
 * {
 	font-family: "JetbrainsMono Nerd Font" ;
 	font-size: 14px;
+	font-weight: 500;
 	background: none;
 	border: none;
 	color: @primary;
+	box-shadow: none;
 }
 
 tooltip {
@@ -70,6 +72,10 @@ tooltip {
 	color: @primary;
 }
 
+#workspaces button:hover {
+	padding-top: 10px;
+	transition: all 0.1s ease;
+}
 
 #backlight {
 	background: none;
