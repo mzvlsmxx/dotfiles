@@ -19,7 +19,6 @@
 	background-color: black;
 	border: 2px solid black;
 	color: whitesmoke;
-	border-radius: 4px;
 }
 
 #entry:selected {
@@ -32,7 +31,7 @@
 }
 
 #input {
-	border-radius: 4px;
+	border-radius: 0px;
 	outline: none;
 	border: none;
 	box-shadow: none;
