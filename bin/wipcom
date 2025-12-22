@@ -7,7 +7,7 @@ git add . > /dev/null
 
 timestamp=$(date +"%d.%m.%Y %H:%M")
 
-if [ -z "$1" ]; then
+if [[ -z "$1" ]]; then
 	git commit -m "wip: $timestamp" > /dev/null
 else 
 	git commit -m "wip: $timestamp ($1)" > /dev/null
