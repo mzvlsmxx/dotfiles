@@ -1,13 +1,15 @@
 @define-color primary whitesmoke;
 @define-color alert #470000;
+@define-color secondary #888888;
+
 
 * {
 	font-family: "JetbrainsMono Nerd Font";
 	font-size: 14px;
 	font-weight: 500;
-	background: none;
-	border: none;
 	color: @primary;
+	border: none;
+	background: none;
 	box-shadow: none;
 }
 
@@ -72,9 +74,28 @@ tooltip {
 	color: @primary;
 }
 
+#workspaces button {
+	color: @primary;
+	transition: all 0.1s ease;
+}
+
+#workspaces button * {
+	color: inherit;
+	box-shadow: inherit;
+}
+
+
 #workspaces button:hover {
 	padding-top: 10px;
-	transition: all 0.1s ease;
+}
+
+
+#workspaces button.empty {
+	color: @secondary;
+}
+
+#workspaces button.active {
+	color: @primary;
 }
 
 #backlight {
