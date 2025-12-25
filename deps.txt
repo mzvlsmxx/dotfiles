@@ -16,3 +16,4 @@ git
 less
 zip
 unzip
+visual-studio-code-bin
