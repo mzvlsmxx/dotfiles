@@ -14,6 +14,7 @@
 #inner-box, 
 #outer-box {
 	background-color: black;
+	padding: 4px;
 }
 
 #outer-box {
@@ -28,12 +29,19 @@
 }
 
 #entry:selected {
-	border-bottom: 2px solid whitesmoke;
-	border-top: 2px solid whitesmoke;
+	/* border-bottom: 2px solid whitesmoke; */
+	/* border-top: 2px solid whitesmoke; */
+	border-left: 2px solid whitesmoke;
+	padding: 0 0 0 8px;
+	transition: all 0.1s ease;
 }
 
 #entry:selected #text {
 	font-weight: bold;
+}
+
+#input > image.left {
+	-gtk-icon-transform:scaleX(0);
 }
 
 #input {
