@@ -18,6 +18,7 @@ hyprpaper
 sddm
 waybar
 wofi
+swaync
 
 tree
 git
