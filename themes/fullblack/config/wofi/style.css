@@ -40,8 +40,8 @@
 	font-weight: bold;
 }
 
-#input > image.left {
-	-gtk-icon-transform:scaleX(0);
+#input > image {
+	-gtk-icon-transform: scaleY(0);
 }
 
 #input {
@@ -56,3 +56,5 @@
 #input * {
 	color: whitesmoke;
 }
+
+

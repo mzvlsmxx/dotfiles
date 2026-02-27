@@ -15,3 +15,6 @@ sudo \cp -r ~/dotfiles/themes/fullblack/sddm/mzvlsmxx-sddm/ /usr/share/sddm/them
 
 # backgrounds
 \cp -r ~/dotfiles/backgrounds/ ~/.config/
+
+# zsh theme
+\cp ~/dotfiles/.zshrc ~/.zshrc
