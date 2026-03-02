@@ -16,5 +16,10 @@ sudo \cp -r ~/dotfiles/themes/fullblack/sddm/mzvlsmxx-sddm/ /usr/share/sddm/them
 # backgrounds
 \cp -r ~/dotfiles/backgrounds/ ~/.config/
 
-# zsh theme
+# zsh profile
 \cp ~/dotfiles/.zshrc ~/.zshrc
+
+# oh my zsh theme
+mkdir -p ~/.oh-my-zsh/custom/themes
+\cp ~/dotfiles/oh_my_zsh_themes/mzvlsmxx.zsh-theme ~/.oh-my-zsh/custom/themes/mzvlsmxx.zsh-theme
+
