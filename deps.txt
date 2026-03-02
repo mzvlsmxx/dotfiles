@@ -26,3 +26,9 @@ less
 zip
 unzip
 visual-studio-code-bin
+
+ADD RUSSIAN LANGUAGE:
+1. uncomment ru_RU.UTF-8 UTF-8 in /etc/locale.gen
+2. run locale-gen
+3. reboot
+then change hyprland config (set already)
