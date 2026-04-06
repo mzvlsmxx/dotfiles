@@ -3,12 +3,16 @@
 theme=''
 
 while true; do
-    read -n 1 -p $'Select theme:\n1. Main\n0. Cancel\n\n>> ' theme_num
+    read -n 1 -p $'Select theme:\n1. Main\n2. Orange\n0. Cancel\n\n>> ' theme_num
     echo ""
 
     case $theme_num in
         1)
             theme='main'
+            break
+            ;;
+        2)
+            theme='orange'
             break
             ;;
         0)
@@ -39,31 +43,34 @@ done
 
 
 # sddm theme
-sudo \cp -r ~/dotfiles/themes/$theme/sddm/mzvlsmxx-sddm/ /usr/share/sddm/themes/
+sudo \cp -r $HOME/dotfiles/themes/$theme/sddm/mzvlsmxx-sddm/ /usr/share/sddm/themes/
 
 # other configs
-\cp -r ~/dotfiles/themes/$theme/config/* ~/.config/
+\cp -r $HOME/dotfiles/themes/$theme/config/* $HOME/.config/
 
 # hyprland
-\cp -r ~/dotfiles/themes/$theme/config/hyprland/* ~/.config/hypr/
+\cp -r $HOME/dotfiles/themes/$theme/config/hyprland/* $HOME/.config/hypr/
 
 # commands
-\cp -r ~/dotfiles/bin ~/
-chmod +x ~/*
+\cp -r $HOME/dotfiles/bin $HOME/
+chmod +x $HOME/*
 
 # backgrounds
-\cp -r ~/dotfiles/backgrounds/ ~/.config/
+\cp -r $HOME/dotfiles/backgrounds/ $HOME/.config/
 
 # reload hyprpaper
-sh -c "pkill hyprpaper; hyprpaper > /dev/null & disown"
+pkill hyprpaper
+hyprctl dispatch exec "hyprpaper" > /dev/null
 
 # reload waybar
-sh -c "pkill waybar; waybar -c ~/.config/waybar/config.jsonc -s ~/.config/waybar/style/style.css > /dev/null & disown"
+killall waybar > /dev/null
+hyprctl dispatch exec "waybar -c $HOME/.config/waybar/config.jsonc -s $HOME/.config/waybar/style/style.css" > /dev/null
+# waybar -c $HOME/.config/waybar/config.jsonc -s $HOME/.config/waybar/style/style.css > /dev/null & disown
 
 # zsh profile
-\cp ~/dotfiles/.zshrc ~/.zshrc
+\cp $HOME/dotfiles/.zshrc $HOME/.zshrc
 
 # oh my zsh theme
-mkdir -p ~/.oh-my-zsh/custom/themes
-\cp ~/dotfiles/oh_my_zsh_themes/mzvlsmxx.zsh-theme ~/.oh-my-zsh/custom/themes/mzvlsmxx.zsh-theme
+mkdir -p $HOME/.oh-my-zsh/custom/themes
+\cp $HOME/dotfiles/oh_my_zsh_themes/mzvlsmxx.zsh-theme $HOME/.oh-my-zsh/custom/themes/mzvlsmxx.zsh-theme
 
