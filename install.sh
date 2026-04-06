@@ -17,6 +17,7 @@ while true; do
             ;;
         0)
             break
+            exit 0
             ;;
         *)
             clear
@@ -46,17 +47,18 @@ done
 sudo \cp -r $HOME/dotfiles/themes/$theme/sddm/mzvlsmxx-sddm/ /usr/share/sddm/themes/
 
 # other configs
+# sudo rsync -a --exclude 'hyprland' $HOME/dotfiles/themes/$theme/config/* $HOME/.config/
 \cp -r $HOME/dotfiles/themes/$theme/config/* $HOME/.config/
 
 # hyprland
-\cp -r $HOME/dotfiles/themes/$theme/config/hyprland/* $HOME/.config/hypr/
+# \cp -r $HOME/dotfiles/themes/$theme/config/hyprland/* $HOME/.config/hypr/
 
 # commands
 \cp -r $HOME/dotfiles/bin $HOME/
 chmod +x $HOME/*
 
 # backgrounds
-\cp -r $HOME/dotfiles/backgrounds/ $HOME/.config/
+\cp -r $HOME/dotfiles/backgrounds $HOME/.config/
 
 # reload hyprpaper
 pkill hyprpaper

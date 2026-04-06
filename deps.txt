@@ -25,6 +25,7 @@ git
 less
 zip
 unzip
+rsync
 visual-studio-code-bin
 
 ADD RUSSIAN LANGUAGE:
