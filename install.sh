@@ -54,6 +54,9 @@ chmod +x ~/*
 # backgrounds
 \cp -r ~/dotfiles/backgrounds/ ~/.config/
 
+# reload hyprpaper
+sh -c "pkill hyprpaper; hyprpaper > /dev/null & disown"
+
 # zsh profile
 \cp ~/dotfiles/.zshrc ~/.zshrc
 

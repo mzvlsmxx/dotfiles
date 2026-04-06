@@ -7,6 +7,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # Path to custom scripts
 export PATH="$HOME/bin:$PATH"
 
+# Venv prompt
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -74,7 +77,7 @@ ZSH_THEME="mzvlsmxx"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
