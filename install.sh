@@ -36,6 +36,8 @@ done
 #         ;;
 # esac
 
+
+
 # sddm theme
 sudo \cp -r ~/dotfiles/themes/$theme/sddm/mzvlsmxx-sddm/ /usr/share/sddm/themes/
 
@@ -43,10 +45,11 @@ sudo \cp -r ~/dotfiles/themes/$theme/sddm/mzvlsmxx-sddm/ /usr/share/sddm/themes/
 \cp -r ~/dotfiles/themes/$theme/config/* ~/.config/
 
 # hyprland
-\cp -r ~/dotfiles/hyprland/* ~/.config/hypr/
+\cp -r ~/dotfiles/themes/$theme/config/hyprland/* ~/.config/hypr/
 
 # commands
 \cp -r ~/dotfiles/bin ~/
+chmod +x ~/*
 
 # backgrounds
 \cp -r ~/dotfiles/backgrounds/ ~/.config/

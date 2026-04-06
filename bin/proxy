@@ -1,0 +1,19 @@
+#!/bin/env bash
+set +x
+
+shopt -s nocasematch
+
+if [[ $1 =~ ^(on|up)$ ]]; then
+    nmcli connection up proxy >/dev/null
+    echo "Proxy turned on"
+
+elif [[ $1 =~ ^(off|down)$ ]]; then
+    nmcli connection down proxy >/dev/null
+    echo "Proxy turned off"
+
+else
+    echo "Invalid value: '$1'"
+    exit 1
+fi
+
+shopt -u nocasematch
