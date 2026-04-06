@@ -17,7 +17,7 @@
     "format-icons": {
       "urgent": "!",
       "active": "X",
-      "default": "0"
+      "default": "|"
     },
     "persistent-workspaces": {
       "*": 5

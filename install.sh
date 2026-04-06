@@ -57,6 +57,9 @@ chmod +x ~/*
 # reload hyprpaper
 sh -c "pkill hyprpaper; hyprpaper > /dev/null & disown"
 
+# reload waybar
+sh -c "pkill waybar; waybar -c ~/.config/waybar/config.jsonc -s ~/.config/waybar/style/style.css > /dev/null & disown"
+
 # zsh profile
 \cp ~/dotfiles/.zshrc ~/.zshrc
 
