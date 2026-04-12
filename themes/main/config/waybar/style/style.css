@@ -1,4 +1,5 @@
 @define-color primary whitesmoke;
+@define-color success #00AA66;
 @define-color alert #470000;
 @define-color secondary #888888;
 
@@ -31,7 +32,7 @@ tooltip {
 }
 
 #battery.charging, #battery.plugged {
-	color: @primary;
+	color: @success;
 }
 
 #battery.critical:not(.charging) {
