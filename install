@@ -23,11 +23,29 @@ while true; do
 done
 
 
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        -p|--password)
+            sudopwd="$2"
+            shift 2
+            ;;
+        *)
+            echo "Неизвестный параметр: $1"
+            exit 1
+            ;;
+    esac
+done
+
+
 # sddm theme
-sudo \cp -r $HOME/dotfiles/themes/$theme/sddm/mzvlsmxx-sddm/ /usr/share/sddm/themes/
+if [ -n "$sudopwd" ]; then
+    echo "$sudopwd" | sudo -S \cp -r $HOME/dotfiles/themes/$theme/sddm/mzvlsmxx-sddm/ /usr/share/sddm/themes/
+else
+    sudo \cp -r $HOME/dotfiles/themes/$theme/sddm/mzvlsmxx-sddm/ /usr/share/sddm/themes/
+fi
+
 
 # other configs
-# sudo rsync -a --exclude 'hyprland' $HOME/dotfiles/themes/$theme/config/* $HOME/.config/
 \cp -r $HOME/dotfiles/themes/$theme/config/* $HOME/.config/
 
 # commands
