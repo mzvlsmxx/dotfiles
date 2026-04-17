@@ -36,8 +36,10 @@
 
   // Language (Hyprland)
   "hyprland/language": {
-    "format": "󰌌 {short}",
-    "tooltip-format": "Language: {long}"
+    "format": "󰌌 {}",
+    "tooltip-format": "Language: {long}",
+    "format-en": "EN",
+    "format-ru": "RU"
   },
 
   // Backlight
@@ -105,6 +107,45 @@
     },
     "interval": 1
   },
+
+  // "custom/test": {
+  //   "format": "{icon} {text} {percentage}",
+  //   "return-type": "json",
+  //   "exec": "$HOME/.config/waybar/scripts/test.sh",
+  //   "interval": 1, // Update frequency in seconds
+  //   "tooltip": true,
+  //   "on-click": "kitty cmatrix"
+  // },
+
+
+
+  // "custom/test": {
+  //   "format": "{icon} {text}",
+  //   "format-icons": {
+  //     "test": "XX"
+  //   },
+  //   "return-type": "json",
+  //   "exec": "$HOME/.config/waybar/scripts/test.sh",
+  //   "interval": 1, // Update frequency in seconds
+  //   "tooltip": true,
+  //   "on-click": "$HOME/.config/waybar/scripts/test.sh toggle"
+  // },
+
+  "custom/proxy": {
+      "format": "{text} {icon}",
+      "format-icons": {
+          "on": "ON",
+          "off": "OFF"
+      },
+      "return-type": "json",
+      "tooltip": true,
+      "exec": "$HOME/.config/waybar/scripts/toggle_proxy.sh", 
+      "on-click": "$HOME/.config/waybar/scripts/toggle_proxy.sh toggle",
+      "signal": 1,
+      "interval": "once"
+  },
+
+
 
   // Notifications (SwayNC)
   //"custom/notification": {

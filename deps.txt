@@ -11,6 +11,7 @@ pulseaudio
 pavucontrol
 brightnessctl
 cliphist (mb not)
+procps-ng
 
 cmatrix
 hyprland
@@ -25,7 +26,6 @@ git
 less
 zip
 unzip
-rsync
 visual-studio-code-bin
 
 ADD RUSSIAN LANGUAGE:

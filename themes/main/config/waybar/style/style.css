@@ -20,14 +20,14 @@ tooltip {
 }
 
 #network {
-	margin: 0 16px 0 0;
+	margin: 0 8px;
 	transition: none;
 	color: @primary;
 	background: none;
 }
 
 #battery {
-	margin: 0 16px;
+	margin: 0 8px;
 	color: @primary;
 }
 
@@ -51,24 +51,29 @@ tooltip {
 }
 
 #backlight {
-	margin: 0 16px;
+	margin: 0 8px;
 	color: @primary;
 }
 
 #clock {
-	margin: 0 16px;
+	margin: 0 8px;
 	color: @primary;
 }
 
 #custom-launcher {
-	margin: 0 16px;
-    	color: @primary;
+	margin: 0 8px;
+    color: @primary;
 }
 
-#hyprland-workspaces {
-	margin: 0 16px;
-	color: @primary;
+#pulseaudio {
+	margin: 0 8px;
+    color: @primary;
 }
+
+/* #hyprland-workspaces {
+	margin: 0 8px;
+	color: @primary;
+} */
 
 #workspaces button {
 	color: @primary;
@@ -95,6 +100,24 @@ tooltip {
 
 #backlight {
 	background: none;
-	margin: 0 16px;
-    	color: @primary;
+	margin: 0 8px;
+    color: @primary;
+}
+
+#language {
+	margin: 0 8px;
+	color: @primary;
+}
+
+/* #custom-test {
+	color: @primary;
+} */
+
+#custom-proxy {
+	margin: 0 8px;
+	color: @primary;
+}
+
+#custom-proxy.proxy-on {
+	color: @success;
 }

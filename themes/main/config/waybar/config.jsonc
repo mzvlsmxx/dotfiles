@@ -1,5 +1,10 @@
 {
   "style": "style/style.css",
+
+  "margin-top": 2,
+  "margin-bottom": 2,
+  "margin-left": 10,
+  "margin-right": 10,
   
   "layer": "top",
   "position": "top",
@@ -7,7 +12,11 @@
   
   "modules-left": [
     "custom/launcher",
-    "clock"
+    "clock",
+    "hyprland/language",
+    "battery",
+    "backlight",
+    "pulseaudio"
   ],
   
   "modules-center": [
@@ -15,9 +24,7 @@
   ],
   
   "modules-right": [
-    "battery",
-    "pulseaudio",
-    "backlight",
+    "custom/proxy",
     "network"
   ],
 
