@@ -16,6 +16,8 @@ procps-ng
 cmatrix
 hyprland
 hyprpaper
+hyprlock
+hypridle
 sddm
 waybar
 wofi

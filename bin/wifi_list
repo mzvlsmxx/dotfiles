@@ -1,0 +1,12 @@
+#!/bin/env bash
+
+
+if [[ "$1" == "--show-connections" ]]; then
+    nmcli connection show
+else
+    nmcli device wifi rescan > /dev/null
+    nmcli device wifi list
+    echo -e '\e[90m(*) nmcli device wifi connect <(B)SSID> [password <password>]\e[0m'
+fi
+
+

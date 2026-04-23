@@ -82,8 +82,8 @@
     "tooltip-format-ethernet": "  {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
-    "on-click": "nm-connection-editor",
-    "on-click-right": "nm-connection-editor"
+    "on-click": "kitty --hold $HOME/bin/wifi_list",
+    "on-click-right": "kitty --hold $HOME/bin/wifi_list --show-connections"
   },
 
   // Clock

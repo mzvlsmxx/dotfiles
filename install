@@ -37,12 +37,12 @@ while [[ $# -gt 0 ]]; do
 done
 
 
-# sddm theme
-if [ -n "$sudopwd" ]; then
-    echo "$sudopwd" | sudo -S \cp -r $HOME/dotfiles/themes/$theme/sddm/mzvlsmxx-sddm/ /usr/share/sddm/themes/
-else
-    sudo \cp -r $HOME/dotfiles/themes/$theme/sddm/mzvlsmxx-sddm/ /usr/share/sddm/themes/
-fi
+# # sddm theme
+# if [ -n "$sudopwd" ]; then
+#     echo "$sudopwd" | sudo -S \cp -r $HOME/dotfiles/themes/$theme/sddm/mzvlsmxx-sddm/ /usr/share/sddm/themes/
+# else
+#     sudo \cp -r $HOME/dotfiles/themes/$theme/sddm/mzvlsmxx-sddm/ /usr/share/sddm/themes/
+# fi
 
 
 # other configs
@@ -50,7 +50,7 @@ fi
 
 # commands
 \cp -r $HOME/dotfiles/bin $HOME/
-chmod +x $HOME/*
+chmod +x $HOME/bin/*
 
 # backgrounds
 \cp -r $HOME/dotfiles/backgrounds $HOME/.config/
