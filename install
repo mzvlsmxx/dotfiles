@@ -65,8 +65,11 @@ done
 # fi
 
 
-# other configs
-\cp -r $HOME/dotfiles/themes/$theme/config/* $HOME/.config/
+# configs
+\cp -r $HOME/dotfiles/config/* $HOME/.config/
+
+# theme specific cinfigs
+\cp -r $HOME/dotfiles/themes/$theme/* $HOME/.config/
 
 # commands
 \cp -r $HOME/dotfiles/bin $HOME/
@@ -88,5 +91,4 @@ hyprctl dispatch exec "waybar -c $HOME/.config/waybar/config.jsonc -s $HOME/.con
 
 # oh my zsh theme
 mkdir -p $HOME/.oh-my-zsh/custom/themes
-\cp $HOME/dotfiles/oh_my_zsh_themes/mzvlsmxx.zsh-theme $HOME/.oh-my-zsh/custom/themes/mzvlsmxx.zsh-theme
-
+\cp $HOME/dotfiles/themes/$theme/zsh-theme/.zsh-theme $HOME/.oh-my-zsh/custom/themes/mzvlsmxx.zsh-theme

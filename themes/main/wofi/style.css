@@ -1,3 +1,8 @@
+/*
+man wofi 5 
+for manual to css selectors
+*/
+
 * {
 	border: none;
 	outline: none;
@@ -29,8 +34,6 @@
 }
 
 #entry:selected {
-	/* border-bottom: 2px solid whitesmoke; */
-	/* border-top: 2px solid whitesmoke; */
 	border-left: 2px solid whitesmoke;
 	padding: 0 0 0 8px;
 	transition: all 0.1s ease;
@@ -40,11 +43,16 @@
 	font-weight: bold;
 }
 
-#input > image {
+#input image {
+	display: none;
+	margin: 0;
+	padding: 0;
 	-gtk-icon-transform: scaleY(0);
+	-gtk-icon-transform: scaleX(0);
 }
 
 #input {
+	padding-left: 0px;
 	border-radius: 0px;
 	outline: none;
 	border: none;
