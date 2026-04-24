@@ -1,6 +1,6 @@
 mode=drun
 allow_images=false
-prompt=> > >
+prompt=>
 height=30%
 width=20%
 location=center

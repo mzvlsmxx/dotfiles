@@ -1,40 +1,60 @@
 #!/usr/bin/env bash
 
-theme=''
+echo "Select theme:"
 
-while true; do
-    read -n 1 -p $'Select theme:\n1. Main\n0. Cancel\n\n>> ' theme_num
-    echo ""
+options=()
+for dir in $HOME/dotfiles/themes/*/; do
+    [[ -e "$dir" ]] || break
+    options+=("$(basename "$dir")")
+done
 
-    case $theme_num in
-        1)
-            theme='main'
-            break
-            ;;
-        0)
-            break
-            exit 0
-            ;;
-        *)
-            clear
-            echo "Ошибка: '$theme_num' не подходит цифрой. Попробуйте еще раз."
-            ;;
-    esac
+theme=""
+select option in "${options[@]}"; do
+    if [ -n "$option" ]; then
+        theme="$option"
+        break
+    else
+        echo "Invalid selection."
+    fi
 done
 
 
-while [[ $# -gt 0 ]]; do
-    case $1 in
-        -p|--password)
-            sudopwd="$2"
-            shift 2
-            ;;
-        *)
-            echo "Неизвестный параметр: $1"
-            exit 1
-            ;;
-    esac
-done
+
+# theme=''
+
+# while true; do
+#     read -n 1 -p $'Select theme:\n1. Main\n0. Cancel\n\n>> ' theme_num
+#     echo ""
+
+#     case $theme_num in
+#         1)
+#             theme='main'
+#             break
+#             ;;
+#         0)
+#             break
+#             exit 0
+#             ;;
+#         *)
+#             clear
+#             echo "Ошибка: '$theme_num' не подходит цифрой. Попробуйте еще раз."
+#             ;;
+#     esac
+# done
+
+
+# while [[ $# -gt 0 ]]; do
+#     case $1 in
+#         -p|--password)
+#             sudopwd="$2"
+#             shift 2
+#             ;;
+#         *)
+#             echo "Неизвестный параметр: $1"
+#             exit 1
+#             ;;
+#     esac
+# done
 
 
 # # sddm theme
@@ -62,7 +82,6 @@ hyprctl dispatch exec "hyprpaper" > /dev/null
 # reload waybar
 killall waybar > /dev/null
 hyprctl dispatch exec "waybar -c $HOME/.config/waybar/config.jsonc -s $HOME/.config/waybar/style/style.css" > /dev/null
-# waybar -c $HOME/.config/waybar/config.jsonc -s $HOME/.config/waybar/style/style.css > /dev/null & disown
 
 # zsh profile
 \cp $HOME/dotfiles/.zshrc $HOME/.zshrc
