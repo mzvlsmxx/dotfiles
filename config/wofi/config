@@ -1,7 +1,8 @@
 mode=drun
 allow_images=false
 prompt=>
-height=300
-width=350
-location=center
+height=150
+width=500
+location=6
+yoffset=-10
 insensetive=true
