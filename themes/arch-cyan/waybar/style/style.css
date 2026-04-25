@@ -1,4 +1,5 @@
 @define-color primary whitesmoke;
+@define-color accent #00FFFF;
 @define-color success #00AA66;
 @define-color alert #470000;
 @define-color secondary #888888;
@@ -17,6 +18,10 @@
 tooltip {
 	border-radius: 8px;
 	background-color: rgba(0, 0, 0, 0.9);
+}
+
+#custom-launcher {
+	color: @accent;
 }
 
 #network {
@@ -95,7 +100,7 @@ tooltip {
 }
 
 #workspaces button.active {
-	color: @primary;
+	color: @accent;
 }
 
 #backlight {
@@ -119,5 +124,5 @@ tooltip {
 }
 
 #custom-proxy.proxy-on {
-	color: @success;
+	color: @accent;
 }

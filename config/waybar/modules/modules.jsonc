@@ -1,11 +1,4 @@
 {
-  // Launcher
-  "custom/launcher": {
-    "format": "",
-    "on-click": "wofi --show drun",
-    "tooltip": false
-  },
-
   // Workspaces (Hyprland)
   "hyprland/workspaces": {
     "on-scroll-up": "hyprctl dispatch workspace r-1",
@@ -143,6 +136,13 @@
       "on-click": "$HOME/.config/waybar/scripts/toggle_proxy.sh toggle",
       "signal": 1,
       "interval": "once"
+  },
+
+  // Launcher
+  "custom/launcher": {
+    "format": "<span color='#00FFFF'></span>",
+    "on-click": "wofi --show drun",
+    "tooltip": false
   },
 
 
