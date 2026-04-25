@@ -60,8 +60,8 @@
     },
     "on-click": "pamixer -t && pamixer --get-volume > $SWAYSOCK.wob",
     "on-click-right": "pavucontrol",
-    "on-scroll-up": "pamixer -ui 5 && pamixer --get-volume > $SWAYSOCK.wob",
-    "on-scroll-down": "pamixer -ud 5 && pamixer --get-volume > $SWAYSOCK.wob"
+    "on-scroll-down": "pamixer -ui 5 && pamixer --get-volume > $SWAYSOCK.wob",
+    "on-scroll-up": "pamixer -ud 5 && pamixer --get-volume > $SWAYSOCK.wob"
   },
 
   // Network
