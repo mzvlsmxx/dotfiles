@@ -1,8 +1,8 @@
 mode=drun
 allow_images=false
-prompt=>
+prompt=>_
 height=150
 width=500
 location=6
-yoffset=-10
+yoffset=-14
 insensetive=true

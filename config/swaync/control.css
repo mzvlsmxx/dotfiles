@@ -17,7 +17,8 @@
   background: alpha(@background, 0.75);
   border-radius: 10px;
   border: 2px solid @selected;
-  box-shadow: 0 0 8px 0 @selected;
+  box-shadow: 0 0 8px 0 @selected,
+              inset 0 0 8px 0 @selected;
   margin: 18px;
   padding: 12px;
 }
