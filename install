@@ -85,6 +85,9 @@ hyprctl dispatch exec "hyprpaper" > /dev/null
 # reload waybar
 killall waybar > /dev/null
 hyprctl dispatch exec "waybar -c $HOME/.config/waybar/config.jsonc -s $HOME/.config/waybar/style/style.css" > /dev/null
+killall swaync > /dev/null
+hyprctl dispatch exec "swaync"
+
 
 # zsh profile
 \cp $HOME/dotfiles/.zshrc $HOME/.zshrc

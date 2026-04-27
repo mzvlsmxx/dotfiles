@@ -1,0 +1,7 @@
+@define-color background      rgba(0, 10, 10, 1);
+@define-color background-alt  rgba(0, 0, 0, 0);
+@define-color background-sec  rgba(0, 0, 0, 0);
+@define-color text            rgba(200, 200, 200, 1);
+@define-color selected        rgba(0, 255, 255, 1);
+@define-color hover           rgba(0, 255, 255, 1);
+@define-color urgent          rgba(242, 143, 173, 1);
