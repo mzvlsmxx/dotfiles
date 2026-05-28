@@ -1,7 +1,8 @@
 @define-color primary whitesmoke;
 @define-color accent #00FFFF;
 @define-color success #00AA66;
-@define-color alert #470000;
+@define-color error #470000;
+@define-color warning #AAAA00;
 @define-color secondary #888888;
 
 
@@ -41,7 +42,7 @@ tooltip {
 }
 
 #battery.critical:not(.charging) {
-    color: @alert;
+    color: @error;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -125,4 +126,8 @@ tooltip {
 
 #custom-proxy.proxy-on {
 	color: @accent;
+}
+
+#custom-proxy.proxy-activating {
+	color: @warning;
 }

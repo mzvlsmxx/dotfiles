@@ -27,6 +27,7 @@ tree
 git
 less
 zip
+yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide resvg imagemagick
 unzip
 visual-studio-code-bin
 

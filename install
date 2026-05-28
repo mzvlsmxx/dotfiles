@@ -68,6 +68,12 @@ done
 # configs
 \cp -r $HOME/dotfiles/config/* $HOME/.config/
 
+# default applications
+\cp -r $HOME/dotfiles/local/* $HOME/.local/
+xdg-mime default yazi.desktop inode/directory
+gio mime inode/directory yazi.desktop
+update-desktop-database ~/.local/share/applications
+
 # theme specific cinfigs
 \cp -r $HOME/dotfiles/themes/$theme/* $HOME/.config/
 

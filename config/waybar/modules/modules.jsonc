@@ -75,8 +75,8 @@
     "tooltip-format-ethernet": "  {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
-    "on-click": "kitty --hold $HOME/bin/wifi_list",
-    "on-click-right": "kitty --hold $HOME/bin/wifi_list --show-connections"
+    "on-click": "kitty --hold $HOME/.config/waybar/scripts/wifi_list",
+    "on-click-right": "kitty --hold $HOME/.config/waybar/scripts/wifi_list --show-connections"
   },
 
   // Clock
@@ -128,14 +128,15 @@
       "format": "{text} {icon}",
       "format-icons": {
           "on": "ON",
-          "off": "OFF"
+          "off": "OFF",
+          "activating": "ACT"
       },
       "return-type": "json",
       "tooltip": true,
       "exec": "$HOME/.config/waybar/scripts/toggle_proxy.sh", 
-      "on-click": "$HOME/.config/waybar/scripts/toggle_proxy.sh toggle",
+      "interval": "once",
       "signal": 1,
-      "interval": "once"
+      "on-click": "$HOME/.config/waybar/scripts/toggle_proxy.sh toggle"
   },
 
   // Launcher
